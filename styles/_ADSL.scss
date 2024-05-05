@@ -1,0 +1,294 @@
+@use "variables" as v;
+@use "fonts" as f;
+
+
+.ADSLS{
+    padding: 70px 0px;
+    font-family: f.$font;
+    
+    .title{
+       text-align: center;
+       line-height: 40px;
+       padding: 0px 20px;
+       h2{
+        font-size: 24px;
+        font-weight: bold;
+
+       }
+       p{
+        color: v.$black666;
+        font-size: 19px;
+        font-weight: 400;
+       }
+    }
+
+
+     .card4{
+        padding: 40px 20px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 20px;
+        
+        &-body{
+           border-radius: 5px;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+            .sec1{
+                
+                text-align: center;
+                line-height: 40px;
+                
+                p{
+                    padding: 10px 0px;
+                    font-size: 14;
+                    font-weight: bold;
+                }
+                .sec1bg{
+                    background-color: v.$color2;
+                    color: v.$colorwhite;
+                }
+                h4{
+                    font-size: 30px;
+                    font-weight: bold;
+                    sub{
+                        color: v.$whitea6a6a6a6;
+                        font-size: 20px;
+                    }
+                }
+                button{
+                    margin: 20px 0px;
+                    border: none;
+                    background-color: v.$color2;
+                    padding: 12px 40px;
+                    border-radius: 48px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: v.$colorwhite;
+                    
+                    
+                }
+            }
+
+            .sec2{
+                border-top: 5px solid v.$color2;
+                padding: 20px 0px;
+                .text-icon{
+                    margin: 20px 40px;
+                    display: flex;
+                    gap: 8px;
+                    padding: 6px 0px;
+                    i{
+                        padding: 3px;
+                        background-color: v.$color2;
+                        color: v.$colorwhite;
+                        border-radius: 48px;
+                        font-size: 12px;
+                    }
+                 
+                    p{
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: v.$black666;
+                    }
+
+
+                }
+                .del{
+                        
+                   
+                    i{
+                        background: none;
+                        color: v.$whitea6a6a6a6;
+                        font-size: 18px;
+                    }
+                    p{
+                        color: v.$whitea6a6a6a6; 
+                    }
+                }
+            }
+        }
+        &-body:hover{
+            transform: translateY(-20px);
+            transition: all .6s ease-out;
+        }
+     }
+
+
+
+    .all{
+        display: grid;
+      grid-template-columns: auto auto;
+        align-items: center;
+        background-color: v.$color2; 
+        margin-top: 70px;
+        padding: 30px 20px;
+        gap: 50px;
+        
+        &-text{
+            color: v.$colorwhite;
+            .titl{
+                font-size: 35px;
+                font-weight: bold;
+                font-family:f.$font;
+                line-height: 55px;
+              
+            }
+            .pra{
+                font-size: 18px;
+                font-family:f.$font;
+                font-weight: 400;
+                margin: 25px 0px;
+            }
+            .btn{
+                :hover{
+                    background-color: v.$colorhover2;
+                    transition: .5s;
+                }
+                
+                button{
+                  
+                    background-color: v.$colorwhite;
+                    padding: 20px 35px;
+                    border: none;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    font-family:f.$font;
+                    color: v.$colorblack;
+                    gap: 30px;
+        
+                    i{
+                        padding: 0px 10px;
+                    }
+                }
+            }
+        }
+        
+        
+        &-img{
+            img{
+                width: 100%;
+                border: 15px solid white;
+            }
+        }
+        }
+    
+}
+
+
+
+@media (max-width:992px){
+    .ADSLS{
+        padding: 70px 0px;
+        font-family: f.$font;
+        
+     
+    
+        .all{
+            display: grid;
+          grid-template-columns: auto auto;
+            align-items: center;
+            background-color: v.$color2; 
+            margin-top: 70px;
+            padding: 30px 20px;
+            gap: 50px;
+            
+            &-text{
+                color: v.$colorwhite;
+                .titl{
+                    font-size: 18px;
+                    font-weight: bold;
+                    font-family:f.$font;
+                    line-height: 30px;
+                  
+                }
+                .pra{
+                    font-size: 16px;
+                    font-family:f.$font;
+                    font-weight: 400;
+                    margin: 25px 0px;
+                }
+                .btn{
+                    
+                    button{
+                      
+                        background-color: v.$colorwhite;
+                        padding: 20px 35px;
+                        border: none;
+                        border-radius: 5px;
+                        font-size: 14px;
+                        font-weight: bold;
+                        font-family:f.$font;
+                        color: v.$colorblack;
+                        gap: 30px;
+            
+                        i{
+                            padding: 0px 10px;
+                        }
+                    }
+                }
+            }
+            
+            
+            &-img{
+                img{
+                    width: 100%;
+                    border: 15px solid white;
+                }
+            }
+            }
+
+
+            .card4{
+               
+                display: grid;
+                grid-template-columns: auto auto;
+        
+    }
+}
+}
+
+
+@media (max-width:750px){
+    .ADSLS{
+   
+        .all{
+            display: grid;
+          grid-template-columns: auto ;
+           
+          
+            
+            &-text{
+             
+                .titl{
+                    font-size: 25px;
+                    line-height: 40px;
+                  
+                }
+                .pra{
+                    font-size: 18px;
+                }
+                }
+    
+            }
+
+
+        
+    }
+}
+
+
+@media (max-width:600px){
+    .ADSLS{
+   
+        
+        .card4{
+               
+            display: grid;
+            grid-template-columns: auto ;
+        }
+        
+    }
+}
+
+
+

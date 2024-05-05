@@ -1,0 +1,192 @@
+@use "variables" as v;
+@use "fonts" as f;
+.footers{
+    background-color: v.$menucolor;
+    color: v.$colorwhite;
+}
+.footer{
+    padding: 50px 20px;
+    font-family: f.$font;
+    .section1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+
+        .logo{
+            img{
+                width: 50%;
+            }
+          
+        }
+        .text{
+
+            h3{
+           font-size: 16px;
+           font-weight: 700;
+
+            }
+            p{
+          font-size: 14px;
+          font-weight: 500px;
+          color: v.$whitea6a6a6a6;
+            }
+          }
+          .input{
+          
+            input{
+              width: 350px;
+                
+                background: v.$input;
+                border: none;
+                border-radius: 5px;
+                color: wheat;
+                padding: 18px 20px;
+              
+            }
+            a{
+                background-color: v.$color2;
+                padding: 18px 8px;
+                font-size: 13px;
+                border-radius: 3px;
+                font-weight: bold;
+                color: v.$colorwhite;
+                text-decoration: none;
+                i{
+                    padding: 0px 5px;
+                }
+            }
+          }
+
+    }
+
+
+
+    .section2{
+        padding: 100px 0px;
+       display: grid;
+       grid-template-columns: auto auto auto auto auto;
+        h4{
+            font-size: 18px;
+            font-weight: 600;
+            padding: 7px 0px;
+        }
+        a{
+            text-decoration: none;
+            color: v.$colorwhite;
+            display: block;
+            font-size: 13px;
+            padding: 7px 0px;
+        }
+
+        .Contact{
+            width: 300px;
+            h3{
+                font-size: 15;
+                font-weight: bold;
+                color: v.$whitea6a6a6a6;
+            }
+            a{
+              
+                font-size: 16px;
+                
+            }
+        }
+    }
+
+
+
+    .section3{
+        border-top: .1px solid v.$black363737;
+        
+      
+      .text{
+        padding: 0px 20px;
+        color: v.$whitea6a6a6a6;
+        display: grid;
+     grid-template-columns: 38% 45% 20%;
+        align-items: center;
+        padding-top: 40px;   
+        p{ 
+            font-size: 16px;
+   
+           }
+           .icon{
+            i{
+                padding:  10px;
+                border: 2px solid v.$whitea6a6a6a6;
+                border-radius:48px;
+                font-size: 13px;
+                margin: 0px 5px;
+                
+            }
+           }
+      }
+        
+    }
+}
+
+
+
+@media (max-width:992px){
+    .footer{
+ 
+        .section1{
+            display: grid;
+            grid-template-columns: auto;
+            justify-content: center;
+            text-align: center;
+            gap: 20px;                         
+        }
+        .section2{
+           display: grid;
+           grid-template-columns: auto auto ;
+           gap: 30px;
+        }
+        .section3{
+          .text{
+            display: grid;
+            grid-template-columns: auto;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 20px;           
+          }
+        }
+    }
+}
+
+
+
+@media (max-width:650px){
+    .footer{
+        .section1{
+            .input{
+          
+                input{
+                  width: 230px;
+                }
+        }
+    }
+    .section2{
+       display: grid;
+       grid-template-columns: auto  ;
+
+    }}
+}
+
+
+
+@media (max-width:390px){
+    .footer{
+        .section1{
+            .input{
+          
+                input{
+                  width: 150px;
+                }
+        }
+    }
+}
+
+}

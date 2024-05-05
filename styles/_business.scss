@@ -1,0 +1,136 @@
+@use "variables" as v;
+@use "fonts" as f;
+
+
+.business{
+    padding: 70px 0px;
+    font-family: f.$font;
+    
+    .title{
+       text-align: center;
+       line-height: 40px;
+       padding: 0px 20px;
+       h2{
+        font-size: 24px;
+        font-weight: bold;
+
+       }
+       p{
+        color: v.$black666;
+        font-size: 19px;
+        font-weight: 400;
+       }
+    }
+    
+    .card2{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        padding: 70px 20px;
+        gap: 20px;
+    
+        &-body{
+            line-height: 30px;
+            width: 290px;        
+            padding: 20px 20px;
+            color: v.$colorwhite;
+            border-radius: 5px;
+          
+            img{
+                margin: 20px 0px;
+                width: 80px;
+                border: 5px solid white;
+                padding: 3px;
+            }
+            h2{
+                padding: 20px 0px;
+                font-size: 22px;
+                font-weight: bold;
+            }
+            p{
+                font-size: 20px;
+                font-weight: 300;
+                line-height: 35px;
+
+            }
+
+        }
+
+        &-body:hover{
+            transform: translateY(-20px);
+            transition: all .6s ease-out;
+        }
+        .bg1{
+            background-color: v.$color2;
+            
+        }
+        .bg2{
+            background-color: v.$color1;
+        }
+        .bg3{
+            background-color: v.$menucolor;
+        }
+        
+    }
+}
+
+
+
+@media (max-width:992px){
+    .business{
+ 
+        .card2{
+            display: grid;
+            grid-template-columns: auto auto ;
+          
+            &-body{
+                line-height: 30px;
+                width: 100%;        
+
+            }
+       
+        }
+    }
+    
+}
+
+// mobile devices
+@media (max-width:750px){
+
+    .business{
+ 
+        .card2{
+            display: grid;
+            grid-template-columns: auto auto ;
+          
+            &-body{
+                line-height: 30px;
+                width: 100%;        
+
+            }
+       
+        }
+    }
+    
+    
+    }
+
+    // mobile devices
+@media (max-width:500px){
+
+    .business{
+ 
+        .card2{
+            display: grid;
+            grid-template-columns: auto  ;
+          
+            &-body{
+                line-height: 30px;
+                width: 100%;        
+
+            }
+       
+        }
+    }
+    
+    
+    }

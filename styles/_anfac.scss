@@ -1,0 +1,169 @@
+@use "variables" as v;
+@use "fonts" as f;
+.anfac{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 20px;
+    gap: 100px;
+
+
+    &-img{
+        img{
+            width: 100%;
+            border-radius: 15px;
+        }
+            img:hover{
+               border-radius: 0;
+            
+        }
+    }
+    &-text{
+        font-family: f.$font;
+
+        .title{
+            font-size: 24px;
+            font-weight: bold;
+        
+        }
+        .pra{
+            padding: 20px 0px;
+            line-height: 30px;
+            font-size: 20px;
+            color: v.$black666;
+        }
+        .btn{
+            :hover{
+                background-color: v.$colorhover;
+                transition: .7s;
+            }
+        
+            button{
+                
+              
+                background-color: v.$color2;
+                padding: 20px 40px;
+                border: none;
+                border-radius: 5px;
+                font-size: 14px;
+                font-weight: bold;
+                font-family:f.$font;
+                color: v.$colorwhite;
+                gap: 30px;
+    
+                i{
+                    padding: 0px 10px;
+                }
+            }
+        }
+    }
+   
+}
+
+
+
+// tablet devices.
+
+@media (max-width:992px){
+    .anfac{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 100px 20px;
+        gap: 50px;
+    
+    
+        &-img{
+            img{
+                width: 100%;
+                border-radius: 15px;
+            }
+                img:hover{
+                   border-radius: 0;
+                
+            }
+        }
+        &-text{
+            font-family: f.$font;
+    
+            .title{
+                font-size: 18px;
+                font-weight: bold;
+            
+            }
+            .pra{
+                padding: 10px 0px;
+                line-height: 30px;
+                font-size: 16px;
+                color: v.$black666;
+            }
+
+            .btn{
+            
+                button{                  
+                    padding: 20px 35px;
+                    border-radius: 5px;
+                    font-size: 12px;
+                    }
+            }
+
+          
+        }
+       
+    }
+}
+
+@media (max-width:600px){
+    .anfac{
+        display: grid;
+        grid-template-columns: auto;
+        padding: 100px 20px;
+        gap: 0px;
+    
+        &-text{
+        
+    
+            .title{
+                font-size: 18px;
+            }
+            .pra{
+                padding: 16px 0px;
+                line-height: 30px;
+                font-size: 16px;
+            }
+            .btn{
+            
+                button{                  
+                    padding: 20px 25px;
+                    border-radius: 5px;
+                    font-size: 12px;
+                    }
+            }
+        }
+       
+    }
+
+}
+
+
+@media (max-width:400px){
+
+  .anfac{
+        display: grid;
+        grid-template-columns: auto;
+        padding: 100px 20px;
+        gap: 0px;
+            &-text{
+    
+            .btn{
+            
+                button{
+                    padding: 15px 25px;      
+                    
+                }
+            }
+        }
+       
+    }
+
+}

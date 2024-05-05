@@ -1,0 +1,199 @@
+@use "variables" as v;
+@use "fonts" as f;
+
+@keyframes hovercard{
+    from{
+        width: 1%;
+    }
+    to{
+        width: 100%;
+        
+    }
+}
+
+
+
+.customer{
+   
+    font-family: f.$font;
+    .title{
+       text-align: center;
+       line-height: 40px;
+       h2{
+        font-size: 24px;
+        font-weight: bold;
+
+       }
+       p{
+        color: v.$black666;
+        font-size: 19px;
+        font-weight: 500;
+       }
+    }
+
+
+    &-cards{
+        padding-top: 50px;
+       
+
+        .card1{
+          display: grid;
+          grid-template-columns: auto auto auto auto;
+          gap: 20px;
+          padding: 10px 20px;
+          
+          
+            .card1-body{
+                background-color: v.$colorwhite;
+                box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+            
+
+                transition: all 0.3s;
+                position: relative;
+                overflow: hidden;
+                z-index: 1;
+               
+            
+                ::after{
+                    /* this is what all  will be done when mouse outs from the button */
+                content: "";
+                position: absolute;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: v.$color2;
+                z-index: -1;
+                transform: scale(0, 1);
+                /* this is you are to change for diffirent transition; */
+            
+                transform-origin:  left;
+                transition: transform .7s cubic-bezier(0.86, 0, 0.07, 1);
+                transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+            
+                }
+                :hover::after{
+                    transform: scale(1);
+                    transform-origin:  left;
+                    
+                }
+               
+              
+              
+                .icon-text{
+                    display: flex;
+                    padding: 40px 20px;
+                    align-items: center;
+                    gap: 20px;
+                    i{
+                        background:v.$bgcard;
+                        border-radius: 50%;
+                        padding: 20px;
+                        font-size: 18px;
+                        color: v.$color2;
+                    }
+                    p{
+                        font-size: 22px;
+                        font-weight: 700;
+                        color: v.$menucolor;
+                    }
+                }
+            }
+            .card1-body:hover{
+                p{
+                    color: white;
+                    transition: all 1s;
+                }
+            }
+          
+        }
+        
+    }
+
+}
+
+// tablet device
+
+@media (max-width:992px){
+
+    .customer{   
+        &-cards{
+            padding-top: 50px;
+           
+    
+            .card1{
+              display: grid;
+              grid-template-columns: auto auto auto ;
+              gap: 20px;
+
+              .card1-body{
+                width: 100%;
+              }
+
+
+            }
+        }
+    }
+}
+
+// mobile devices
+@media (max-width:740px){
+
+
+.customer{   
+    .title{
+       line-height: 30px;
+       padding: 10px 20px;
+       h2{
+        font-size: 20px;
+       
+
+       }
+       p{
+        font-size: 17px;
+       
+       }
+    }
+
+
+    &-cards{
+        .card1{
+          display: grid;
+          grid-template-columns: auto;
+          gap: 20px;
+       
+            .card1-body{
+                             
+           
+               width: 100%;
+             
+                .icon-text{
+                    display: flex;
+                      padding: 40px 20px;
+                    align-items: center;
+                    gap: 20px;
+                    i{
+                      
+                        padding: 20px;
+                        font-size: 18px;
+                        
+                    }
+                    p{
+                        font-size: 22px;
+                    
+                    }
+                }
+            }
+          
+        }
+        
+    }
+
+}
+
+}
+
+
+// mobile device
+@media (max-width:400px){
+  
+}
